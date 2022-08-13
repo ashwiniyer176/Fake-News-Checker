@@ -1,0 +1,29 @@
+{% extends "baseHtml.html" %} 
+
+{% block title %} Tweets {% endblock %} 
+{% block Body %}
+<div style="align-items: center; display: flex; margin: 1vh">
+  {% if message %}
+  <h1>Tweet:<br /><span id="in">{{message}} </span></h1>
+    
+  {% else %}
+    <form action="/tweets" method="post">
+      <label>Enter User ID</label>
+      <input type="text" name="twitterID">
+      <input id="submit" type="submit">
+    </form>
+    
+  {% endif %}
+
+</div>
+<!-- 
+<form method="post" action="/DownloadReport">
+
+    <input value={{input}} name="1">
+    <input value={{value}} name="2">
+    <input type="submit">
+
+
+</form> -->
+<!-- <img src="{{ url_for('static',filename='img/0.gif') }}">  -->
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "baseHtml.html" %} {% block title %} Result of the Prediction {% endblock %} {% block Body %}
+<div style="align-items: center; display:flex ; margin: 1vh;">
+    <h1>
+        Given User:<span id="in"> {{ user }} </span>
+    </h1>
+</div>
+<div style="align-items: center; display:flex ; margin: 1vh;">
+    {% if prediction %}
+    <table>
+        <tr>
+            <th>Tweet</th>
+            <th>Authenticity</th>
+        </tr>
+
+        {% for p in prediction %}
+        <tr>
+            <td>{{p[0]}}</td>
+            <td>{{p[1]}}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    {% endif %}
+</div>
+<footer><span style="color: #ff4b51;">Note: Higher the reality score, higher the authenticity of the news</span></footer>
+<!-- 
+<form method="post" action="/DownloadReport">
+
+    <input value={{input}} name="1">
+    <input value={{value}} name="2">
+    <input type="submit">
+
+
+</form> -->
+<!-- <img src="{{ url_for('static',filename='img/0.gif') }}">  -->
+{% endblock %}

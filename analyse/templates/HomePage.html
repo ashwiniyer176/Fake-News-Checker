@@ -1,0 +1,14 @@
+{% extends "baseHtml.html" %} {% block title %} Welcome Home {% endblock %} {% block Body %}
+<div>
+    <h1>
+        Hello Visitor,</h1>
+    <p> <br> Welcome to our Application called "<span id="in">Fake News Checker</span>" where we check if the tweet is fake or not.
+        <br> We do not have the Application working to its full capability as of now but we have a placeholder model in place which will show some basic functionalities of the application.
+    </p>
+    <!-- <img src="{{ url_for('static', filename='img/phunny.gif')}}"> -->
+
+    <h2>
+        <a href="/tweets">To start Predicting Click Here</a>
+    </h2>
+</div>
+{% endblock %}

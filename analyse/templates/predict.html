@@ -1,0 +1,15 @@
+{% extends "baseHtml.html" %} {% block title %} Predection of output {% endblock %} {% block Body %}
+<h1>Joy Predictor
+</h1>
+<p>
+    In this placeholder model we check the Joy percent of any given statemet.
+</p>
+
+<form method="post" action="/output">
+
+    <label>enter the statement you wish to predict</label>
+    <input type="text" name="VALUE ENTERED">
+    <input  id="submit" type="submit">
+
+</form>
+{% endblock %}
